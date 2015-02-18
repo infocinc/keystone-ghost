@@ -4,7 +4,7 @@
 Ghost is an open-source blogging platform that runs on Node.js. It features a theming system , multi-user blogging capabilities and a markdown editor that lets you see a live preview of the content you are working on.
 
 This README explains how you to integrate [Ghost](http://ghost.org) with [KeystoneJS](http://keystonejs.com) without the need for redirections to another domain or subdomain. 
-This is based off this blog [post](www.infocinc.com/blog/integrate-ghost-to-keystonejs).
+This is based off this blog [post](http://www.infocinc.com/blog/integrating-ghost-with-keystonejs/).
 
 ####<p style="text-align:center"> 1. Prerequisites </p>
 
