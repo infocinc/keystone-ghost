@@ -57,7 +57,7 @@ mysql>
 
 ####<p style="text-align:center"> 2. Creating a KeystoneJS app </p>
 
-For this post, I will assume that you can install and successfully run a KeystoneJS sample app on your local dev machine using the Yeoman generator (see footnote 1):
+I will assume that you can install and successfully run a KeystoneJS sample app on your local dev machine using the Yeoman generator (see footnote 1):
 ```bash
 ~/sandbox$ yo keystone
 
