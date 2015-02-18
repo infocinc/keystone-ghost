@@ -9,25 +9,32 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
+
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://keystone-ghost.herokuapp.com/blog',   // add your url
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                host: process.env.POSTGRES_HOST,          // add host
+                user: process.env.POSTGRES_USER,          // add user
+                password: process.env.POSTGRES_PASSWORD,  // add password
+                database: process.env.POSTGRES_DATABASE,  // add db name
+                port: '5432'
             },
             debug: false
         },
-
+        fileStorage: false,                            // turn off file storage
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            host: '0.0.0.0',                           // let heroku figure it out
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            port: process.env.PORT                     // use assigned port number
+        },
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
         }
     },
-
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
